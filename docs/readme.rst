@@ -47,7 +47,7 @@ key <https://allcontributors.org/docs/en/emoji-key>`__):
    <a href="https://chemistry.ucdavis.edu/people/william-mccurdy">
    <img src="_static/images/Bills_pic.jpg" width="100px;" alt=""/>
 
-Willaim (Bill) McCurdy 💻 🚧 📖
+William (Bill) McCurdy 💻 🚧 📖
 
 .. raw:: html
 
