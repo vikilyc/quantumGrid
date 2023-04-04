@@ -66,7 +66,7 @@ You are all set!
 
 To use the library in your own script, first import by:
 
--- code-block:: python
+.. code-block:: python
 
     from quantumgrid.femdvr import FEM_DVR
     from quantumgrid.potential import Potential
