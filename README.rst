@@ -130,6 +130,14 @@ Giuseppe Barbalinardo💻
 
 .. raw:: html
 
+   <td align="center">
+   <a href="https://www.linkedin.com/in/ycnliu/">
+   <img src="https://avatars.githubusercontent.com/u/46979711?v=4" width="100px;" alt=""/>
+
+Yuchen Liu💻 🚧 📖
+
+.. raw:: html
+
    </td>
 
 .. raw:: html
