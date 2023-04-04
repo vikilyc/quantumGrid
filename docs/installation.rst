@@ -83,7 +83,7 @@ And then create a FEM_DVR instance by:
 
     fem_dvr = FEM_DVR(n_order, FEM_boundaries, Mass=mu)
    
-For more details, *vide* '_example'
+For more details, *vide* `_example`
     
 .. _Github repo: https://github.com/vikilyc/quantumGrid
 .. _tarball: https://github.com/vikilyc/quantumGrid/tarball/master
