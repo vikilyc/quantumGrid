@@ -62,7 +62,13 @@ and then
 
     $ python setup.py install
 
-You are all set!
+You are all set with the installation!
+
+.. highlight:: shell
+
+============
+   USAGE
+============
 
 To use the library in your own script, first import by:
 
@@ -70,7 +76,15 @@ To use the library in your own script, first import by:
 
     from quantumgrid.femdvr import FEM_DVR
     from quantumgrid.potential import Potential
-    
+
+And then create a FEM_DVR instance by:
+
+.. code-block:: python
+
+    fem_dvr = FEM_DVR(n_order, FEM_boundaries, Mass=mu)
+   
+For more details, *vide* '_example'
     
 .. _Github repo: https://github.com/vikilyc/quantumGrid
 .. _tarball: https://github.com/vikilyc/quantumGrid/tarball/master
+.. _example: https://github.com/vikilyc/quantumGrid/blob/master/quantumgrid_examples/ECS_FEMDVR_diatomic_time_indep_vibration_H2.py
