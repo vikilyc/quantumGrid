@@ -262,9 +262,9 @@ def main(want_to_plot):
         " |gamma|^2 = ",
         np.abs(gamma_residue) ** 2,
     )
-    # Plot wave function -- It must be type np.complex
-    Cinitial = np.zeros((fem_dvr.nbas), dtype=np.complex)
-    wfcnInitialPlot = np.zeros((fem_dvr.nbas), dtype=np.complex)
+    # Plot wave function -- It must be type complex
+    Cinitial = np.zeros((fem_dvr.nbas), dtype=complex)
+    wfcnInitialPlot = np.zeros((fem_dvr.nbas), dtype=complex)
     for j in range(0, fem_dvr.nbas):
         Cinitial[j] = wfcnPlot[j]
 
@@ -360,9 +360,9 @@ def main(want_to_plot):
             "Norm of wave function from int psi^2 on contour being plotted is ",
             np.sqrt(norm_squared),
         )
-    # Plot wave function -- It must be type np.complex
-    Cinitial = np.zeros((fem_dvr.nbas), dtype=np.complex)
-    wfcnInitialPlot = np.zeros((fem_dvr.nbas), dtype=np.complex)
+    # Plot wave function -- It must be type complex
+    Cinitial = np.zeros((fem_dvr.nbas), dtype=complex)
+    wfcnInitialPlot = np.zeros((fem_dvr.nbas), dtype=complex)
     for j in range(0, fem_dvr.nbas):
         Cinitial[j] = wfcnPlot[j]
 

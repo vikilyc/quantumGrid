@@ -110,10 +110,10 @@ class FEM_DVR(object):
         # to enforce boundary condition psi = 0 at ends of grid
         # all initializations with np.zeros are complex for ECS
         full_grid_size = n_order * N_elements - (N_elements - 1)
-        KE_temp = np.zeros((full_grid_size, full_grid_size), dtype=np.complex)
+        KE_temp = np.zeros((full_grid_size, full_grid_size), dtype=complex)
         # Build FEM_DVR and Kinetic Energy matrix in same for loop:
-        x_pts = np.zeros(full_grid_size, dtype=np.complex)
-        w_pts = np.zeros(full_grid_size, dtype=np.complex)
+        x_pts = np.zeros(full_grid_size, dtype=complex)
+        w_pts = np.zeros(full_grid_size, dtype=complex)
         for i_elem in range(0, N_elements):
             xmin = FEM_boundaries[i_elem]
             xmax = FEM_boundaries[i_elem + 1]
@@ -141,7 +141,7 @@ class FEM_DVR(object):
                         + KE_elem[i, j]
                     )
         nbas = full_grid_size - 2
-        KE_mat = np.zeros((nbas, nbas), dtype=np.complex)
+        KE_mat = np.zeros((nbas, nbas), dtype=complex)
         # apply normalizations of DVR basis to KE matrix, bridging fcns have w_left + w_right
         for i in range(0, nbas):
             for j in range(0, nbas):
@@ -170,7 +170,7 @@ class FEM_DVR(object):
         Returns:
             deriv_matrix (ndarray): square matrix of size n x n
         """
-        deriv_matrix = np.identity(n, dtype=np.complex)
+        deriv_matrix = np.identity(n, dtype=complex)
         deriv_matrix = 0 * deriv_matrix
         for i in range(0, n):
             der = 0.0
@@ -208,7 +208,7 @@ class FEM_DVR(object):
             Kmat (ndarray): square matrix of size n x n
         """
         Dmat = self.deriv(n, x, w)
-        Kmat = np.identity(n, dtype=np.complex)
+        Kmat = np.identity(n, dtype=complex)
         Kmat = 0.0 * Kmat
         for i in range(0, n):
             for j in range(0, n):
@@ -267,7 +267,7 @@ class FEM_DVR(object):
         nbas = self.nbas
         x = self.x_pts
         # Create 2D Hamiltonian matrix, and initialize with zeros
-        H_mat_2D = np.zeros((nbas*nbas, nbas*nbas),dtype=np.complex)
+        H_mat_2D = np.zeros((nbas*nbas, nbas*nbas),dtype=complex)
         # loops on two dimensions
         for i in range(nbas):
             for j in range(nbas):
@@ -308,7 +308,7 @@ class FEM_DVR(object):
             potential (ndarray): potential for the two state system defined by the caller provided V_potential_1, V_potential_2, and V_coupling, size nbas x nbas
         """
         nbas = self.nbas
-        potential = np.zeros((2 * nbas, 2 * nbas), dtype=np.complex)
+        potential = np.zeros((2 * nbas, 2 * nbas), dtype=complex)
         x = self.x_pts
         potential_1 = np.zeros((nbas, nbas))
         potential_2 = np.zeros((nbas, nbas))
@@ -823,18 +823,18 @@ class FEM_DVR(object):
             " steps",
         )
         # Extract the kinetic energy matrix calculated in earlier call to DVRHelper()
-        # KE = np.zeros((nbas,nbas), dtype=np.complex)
+        # KE = np.zeros((nbas,nbas), dtype=complex)
         KE = np.copy(self.KE_mat)
         # Copy Coefs_at_t_initial, so they won't be changed upon return
-        CPrevious = np.zeros(nbas, dtype=np.complex)
+        CPrevious = np.zeros(nbas, dtype=complex)
         for i in range(0, nbas):
             CPrevious[i] = Coefs_at_t_initial[i]
         # initial construction of the matrices of (1-i H Deltat/2) and (1+i H Deltat/2)
         # both with H(t = t_initial)
         Ct = np.zeros(nbas)
-        M = np.identity(nbas, dtype=np.complex)
+        M = np.identity(nbas, dtype=complex)
         M = M + 1j * KE * Deltat / 2.0
-        Mconj = np.identity(nbas, dtype=np.complex)
+        Mconj = np.identity(nbas, dtype=complex)
         Mconj = Mconj - 1j * KE * Deltat / 2.0
         # vectorized logic for potential "correction" meaning diagonal part of M matrices
         i = np.arange(nbas)
@@ -844,7 +844,7 @@ class FEM_DVR(object):
         #  in _vectorize_call res = array(outputs, copy=False, subok=True, dtype=otypes[0])
         #  TypeError: can't convert complex to float
         #
-        #        potential_correction  = np.zeros(nbas, dtype=np.complex)
+        #        potential_correction  = np.zeros(nbas, dtype=complex)
         #        for i in range(0,nbas):
         #            potential_correction[i] =  (1j*Deltat/2.0)*potential(x[i+1],t_initial)
         #
@@ -954,7 +954,7 @@ class FEM_DVR(object):
             V_potential_1, V_potential_2, V_coupling, t_initial
         )
         # Copy Coefs_at_t_initial, so they won't be changed upon return
-        CPrevious = np.zeros(2 * nbas, dtype=np.complex)
+        CPrevious = np.zeros(2 * nbas, dtype=complex)
         for i in range(0, 2 * nbas):
             CPrevious[i] = Coefs_at_t_initial[i]
         # initial construction of the matrices of (1-i H Deltat/2) and (1+i H Deltat/2)

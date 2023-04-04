@@ -6,6 +6,7 @@ Installation
 
 Recommended
 -----------
+This is a temporary version of quantumGrid that fixes the issue with scipy version on PyPI index.
 
 Before going further using conda, you should always update your conda package system:
 
@@ -17,7 +18,7 @@ First, we always recommend to create a conda environment for using our package. 
 
 .. code-block:: console
 
-    $ conda create -n DVRenv
+    $ conda create -n DVRenv python=3.10.10
 
 Now we want all the rest of the packages to only be installed into this environment so activate it before moving forward:
 
@@ -32,50 +33,27 @@ If you have Anaconda intergrated with your shell, you should see `(DVRenv)` in t
     $ echo $CONDA_DEFAULT_ENV
     $ DVRenv
 
-Now the quantumgrid package is on the PyPI index so we need to install pip to access that index.
-
-.. code-block:: console
-
-   (DVRenv) $ conda install pip
-
-(Note that this pip will only be installed in our `DVRenv` environment!)
-
-Now we can install quantumgrid!
-
-.. code-block:: console
-
-   (DVRenv) $ pip install quantumgrid
-
-Now you should be able to use the  quantumgrid package in your `DVRenv` conda environment! You can also run the example scripts simply by executing (see example directory for more details):
-
-.. code-block:: console
-
-    (DVRenv) $ ecs_femdvr_time_indep_h2
-    (DVRenv) $ ecs_femdvr_time_indep_h2 --want_to_plot=true
-
-From sources
-------------
 
 The sources for quantumGrid can be downloaded from the `Github repo`_.
 
-You can either clone the public repository:
+Clone the public repository:
 
 .. code-block:: console
 
-    $ git clone git://github.com/zstreeter/quantumGrid
+    $ git clone git://github.com/vikilyc/quantumGrid
 
 Or download the `tarball`_:
 
 .. code-block:: console
 
-    $ curl -OJL https://github.com/zstreeter/quantumGrid/tarball/master
+    $ curl -OJL https://github.com/vikilyc/quantumGrid/tarball/master
 
 Once you have a copy of the source, you can install it with:
 
 .. code-block:: console
-
+    $ cd ./quantumGrid
     $ python setup.py install
 
 
-.. _Github repo: https://github.com/zstreeter/quantumGrid
-.. _tarball: https://github.com/zstreeter/quantumGrid/tarball/master
+.. _Github repo: https://github.com/vikilyc/quantumGrid
+.. _tarball: https://github.com/vikilyc/quantumGrid/tarball/master
