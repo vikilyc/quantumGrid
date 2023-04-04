@@ -50,8 +50,11 @@ Or download the `tarball`_:
 
 Once you have a copy of the source, you can install it with:
 
+first go to the folder,
 .. code-block:: console
     $ cd ./quantumGrid
+and then
+.. code-block:: console
     $ python setup.py install
 
 
