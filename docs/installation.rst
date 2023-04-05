@@ -6,7 +6,7 @@ Installation
 
 Recommended
 -----------
-This is a temporary version of quantumGrid that fixes the issue with scipy version on PyPI index.
+This is a forked repo of quantumGrid that fixes the issue with scipy version deprecation, there are also some cool features under construction.
 
 Before going further using conda, you should always update your conda package system:
 
