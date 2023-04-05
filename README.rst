@@ -106,7 +106,8 @@ key <https://allcontributors.org/docs/en/emoji-key>`__):
    <a href="https://chemistry.ucdavis.edu/people/william-mccurdy">
    <img src="docs/_static/images/Bills_pic.jpg" width="100px;" alt=""/>
 
-Willaim (Bill) McCurdy 💻 🚧 📖
+Willaim (Bill) McCurdy 
+💻 🚧 📖
 
 .. raw:: html
 
@@ -114,7 +115,8 @@ Willaim (Bill) McCurdy 💻 🚧 📖
    <a href="https://www.linkedin.com/in/zachary-streeter-44a323102/">
    <img src="https://avatars0.githubusercontent.com/u/15461329?v=4" width="100px;" alt=""/>
 
-Zachary Streeter💻 🚧 📖
+Zachary Streeter
+💻 🚧 📖
 
 .. raw:: html
 
@@ -126,7 +128,8 @@ Zachary Streeter💻 🚧 📖
    <a href="http://giuseppe.barbalinardo.com">
    <img src="https://avatars2.githubusercontent.com/u/6192485?v=4" width="100px;" alt=""/>
 
-Giuseppe Barbalinardo💻
+Giuseppe Barbalinardo
+💻
 
 .. raw:: html
 
@@ -134,7 +137,8 @@ Giuseppe Barbalinardo💻
    <a href="https://www.linkedin.com/in/ycnliu/">
    <img src="https://avatars.githubusercontent.com/u/46979711?v=4" width="100px;" alt=""/>
 
-Yuchen Liu💻 🚧 📖
+Yuchen Liu
+💻 🚧 📖
 
 .. raw:: html
 
